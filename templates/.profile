@@ -17,7 +17,7 @@ alias denv="deactivate"
 alias bootstrap="~/.osx-bootstrap/.osx-bootstrap"
 
 ##### Autorun
-bash ~/.osx-bootstrap/updater.sh
+
 
 ##### Homebrew Formula: bash_completion
 ##### Disabled cause of issues with oh-my-zsh
