@@ -22,20 +22,14 @@ export formulas='
     git-flow
     hub
     bash-completion
+    coreutils
+    curl
+    findutils
+    imagemagick
     ssh-copy-id
     wget
-    dnsmasq
-    nginx
-    cowsay
-    redis
-    geoip
-    freetype
-    libtiff
-    webp
-    openjpeg
-    little-cms2
-    watch
-    gettext
+    ffmpeg
+    ack
 '
 for formula in $formulas
 do
