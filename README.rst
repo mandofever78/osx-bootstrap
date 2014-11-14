@@ -17,7 +17,7 @@ Install Bootstrap
 -----------------
 
 #. | Open a terminal and run:
-   | ``bash <(curl -L https://raw.github.com/divio/osx-bootstrap/master/install.sh)``
+   | ``bash <(curl -L https://raw.github.com/mandofever78/osx-bootstrap/master/install.sh)``
 
 You will need to enter your **sudo password** and **github information** during the installation process.
 
