@@ -8,7 +8,7 @@ if [[ ! -f $source_dir/.osx-bootstrap ]]; then
     echo ''
     echo '##### Setting Computer Name'
     # define hostname
-    hostname=$1 && [ ! $1 ] && hostname='osx-'`whoami`
+    hostname=$1 && [ ! $1 ] && hostname='macpro'
     # set hostname
     sudo scutil --set ComputerName $hostname
     sudo scutil --set HostName $hostname
@@ -16,31 +16,13 @@ if [[ ! -f $source_dir/.osx-bootstrap ]]; then
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $hostname
 fi
 
-# ensure FileVault is active
-`sudo fdesetup isactive`
-if [[ $? != 0 ]]; then
-    echo ''
-    read -p "##### Do you want to enable Disk Encryption? [Yn]" -n 1 -r
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        echo ''
-        sudo fdesetup enable
-    else
-        echo ''
-    fi
-fi
+
 
 # setup workspace
-if [[ ! -d ~/Sites ]]; then
-    mkdir -p ~/Sites
-fi
-
 if [[ ! -d ~/Library/LaunchAgents ]]; then
     mkdir -p ~/Library/LaunchAgents
 fi
 
-echo ''
-echo '##### Running OSX Software Updates...'
-sudo softwareupdate -i -a
 
 # update gem versions
 echo ''
