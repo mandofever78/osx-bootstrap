@@ -22,24 +22,16 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     defaults write NSGlobalDomain AppleShowScrollBars -string “Always”
     # Set a blazingly fast keyboard repeat rate
     defaults write NSGlobalDomain KeyRepeat -int 0
-    # Disable window animations
-    defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-    # I don't even... (disabling auto-correct)
-    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
     # Disable automatic termination of inactive apps
     defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
     # Save to disk (not to iCloud) by default
     defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
     # Expanding the save panel by default
     defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-    # Disable smooth scrolling
-    defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
     # Disable Resume system-wide
     defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
     # Display ASCII control characters using caret notation in standard text views
     defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
-    # Increasing the window resize speed for Cocoa applications whether you like it or not
-    defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
     # Expand print panel by default
     defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
     # Disable “natural” (Lion-style) scrolling
@@ -67,7 +59,7 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     # Avoiding creating stupid .DS_Store files on network volumes
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
     # Disable dashboard
-    defaults write com.apple.dashboard mcx-disabled -boolean YES
+    # defaults write com.apple.dashboard mcx-disabled -boolean YES
     # Show the ~/Library folder
     chflags nohidden ~/Library
 
@@ -125,9 +117,6 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     hash tmutil &> /dev/null && sudo tmutil disablelocal
 
     # SECURITY
-    # Requiring password immediately after sleep or screen saver begins
-    defaults write com.apple.screensaver askForPassword -int 1
-    defaults write com.apple.screensaver askForPasswordDelay -int 0
     # Disable the “Are you sure you want to open this application?” dialog
     defaults write com.apple.LaunchServices LSQuarantine -bool false
 
@@ -135,15 +124,11 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     # Deleting space hogging sleep image and disabling
     sudo rm /private/var/vm/sleepimage
     sudo pmset -a hibernatemode 0
-    # Speed up wake from sleep to 24 hours from an hour
-    # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
-    sudo pmset -a standbydelay 86400
-    # Enable Assistive Devices 
-    sudo touch /private/var/db/.AccessibilityAPIEnabled
+    
     # Trackpad: enable tap to click for this user and for the login screen
-    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-    defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    #defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+    #defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    #defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
     # Increasing sound quality for Bluetooth headphones/headsets, because duhhhhh
     defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
     # disable guest user
@@ -152,11 +137,11 @@ if [[ ! -f ~/.osx-bootstrap/.osx-bootstrap ]]; then
     # Enable AirDrop over Ethernet and on unsupported Macs running Lion
     defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
     # show remaining battery time
-    defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+    #defaults write com.apple.menuextra.battery ShowPercent -string "YES"
     # Automatically illuminate built-in MacBook keyboard in low light
-    defaults write com.apple.BezelServices kDim -bool true
+    #defaults write com.apple.BezelServices kDim -bool true
     # Turn off keyboard illumination when computer is not used for 5 minutes
-    defaults write com.apple.BezelServices kDimTime -int 300
+    #defaults write com.apple.BezelServices kDimTime -int 300
     # Disable the Ping sidebar in iTunes
     defaults write com.apple.iTunes disablePingSidebar -bool true
     defaults write com.apple.iTunes disablePing -bool true
