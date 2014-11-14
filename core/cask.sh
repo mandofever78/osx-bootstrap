@@ -1,3 +1,10 @@
+
+#!/bin/bash
+
+# define helpers
+source_dir=~/.osx-bootstrap
+
+# Install Caskroom
 brew tap caskroom/versions
     brew install caskroom/cask/brew-cask
 
@@ -49,3 +56,19 @@ brew tap caskroom/versions
 
     brew cask install --appdir="/Applications" ${apps[@]}
     brew cask cleanup
+    
+    #Install fonts
+    brew tap caskroom/fonts
+    fonts=(
+      font-comic-neue
+      font-droid-sans
+      font-droid-sans-mono
+      font-fira-sans
+      font-meslo-lg
+      font-open-sans
+      font-open-sans-condensed
+      font-roboto
+      font-source-code-pro
+    )
+
+    brew cask install ${fonts[@]}
