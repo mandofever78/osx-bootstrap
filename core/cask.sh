@@ -14,7 +14,6 @@ brew tap caskroom/versions
     authy-bluetooth
     adapter
     anki
-    airdisplay
     audacity
     alfred
     dropbox
