@@ -55,8 +55,6 @@ source $source_dir/core/cask.sh
 source $source_dir/core/mysql.sh
 # install node/npm
 source $source_dir/core/npm.sh
-# install defaults
-source $source_dir/core/defaults.sh
 # install github
 source $source_dir/core/github.sh
 # place your extras here
