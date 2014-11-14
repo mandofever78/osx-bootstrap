@@ -19,7 +19,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 if [[ ! -d ~/.osx-bootstrap ]]; then
     echo '##### Downloading Bootstrap...'
 	# autoupdate bootstrap file
-	git clone https://github.com/divio/osx-bootstrap.git $source_dir
+	git clone https://github.com/mandofever78/osx-bootstrap.git $source_dir
 	# hide folder
 	chflags hidden $source_dir
 else
