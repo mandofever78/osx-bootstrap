@@ -49,6 +49,8 @@ echo 'LAST_EPOCH=$(_current_epoch)' > ~/.osx-bootstrap/.osx-update
 source $source_dir/core/system.sh $1
 # install brew
 source $source_dir/core/brew.sh
+# install cask
+source $source_dir/core/cask.sh
 # install python
 source $source_dir/core/python.sh
 # install mysql
