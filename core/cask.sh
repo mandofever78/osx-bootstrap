@@ -21,6 +21,7 @@ brew tap caskroom/versions
     beamer
     brackets
     brow
+    burn
     cloudup
     capo
     caustic
@@ -29,6 +30,10 @@ brew tap caskroom/versions
     qlcolorcode
     slack
     transmit
+    handbrake
+    picasa
+    the-unarchiver
+    torbrowser
     appcleaner
     evernote-beta
     firefox
@@ -39,6 +44,9 @@ brew tap caskroom/versions
     spotify
     vagrant
     flash
+    fairmount
+    flow 
+    geekbench
     iterm2
     shiori
     sublime-text3
@@ -51,6 +59,7 @@ brew tap caskroom/versions
     skype
     transmission
     slack
+    webstorm
     )
 
     brew cask install --appdir="/Applications" ${apps[@]}
