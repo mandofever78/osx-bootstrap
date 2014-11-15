@@ -24,7 +24,7 @@ brew tap caskroom/versions
     cloudup
     capo
     caustic
-    cheasheet
+    cheatsheet
     google-chrome
     qlcolorcode
     slack
