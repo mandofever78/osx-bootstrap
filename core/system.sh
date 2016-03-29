@@ -8,7 +8,7 @@ if [[ ! -f $source_dir/.osx-bootstrap ]]; then
     echo ''
     echo '##### Setting Computer Name'
     # define hostname
-    hostname=$1 && [ ! $1 ] && hostname='macpro'
+    hostname=$1 && [ ! $1 ] && hostname='KHmacpro'
     # set hostname
     sudo scutil --set ComputerName $hostname
     sudo scutil --set HostName $hostname
